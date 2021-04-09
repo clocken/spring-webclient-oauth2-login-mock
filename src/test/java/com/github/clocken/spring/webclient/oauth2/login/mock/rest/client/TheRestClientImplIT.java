@@ -1,7 +1,7 @@
 package com.github.clocken.spring.webclient.oauth2.login.mock.rest.client;
 
 import com.github.clocken.spring.webclient.oauth2.login.mock.AbstractIntegrationTestWithMockServer;
-import com.github.clocken.spring.webclient.oauth2.login.mock.AlwaysAuthorizedServletOAuth2AuthorizedClientManager;
+import com.github.clocken.spring.webclient.oauth2.login.mock.AlwaysAuthorizedOAuth2AuthorizedClientManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockserver.client.MockServerClient;
@@ -23,8 +23,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 // comment this out to see, that it really bypasses the Client Credentials flow
-@Import(AlwaysAuthorizedServletOAuth2AuthorizedClientManager.class)
-class TheRestClientImplServletIT extends AbstractIntegrationTestWithMockServer {
+@Import(AlwaysAuthorizedOAuth2AuthorizedClientManager.class)
+class TheRestClientImplIT extends AbstractIntegrationTestWithMockServer {
 
     @Value("${mockserver.api.url}")
     URI mockServerApiUrl;
