@@ -10,9 +10,10 @@ to interact with OAuth-2.0-secured resources in a machine-to-machine scenario wi
 
 Clone this repository and checkout either
 
-* [reactive-stack](reactive-stack) for a completely Reactive Spring WebFlux based demo or
-* [servlet-stack](servlet-stack) for a Servlet-Stack based or mixed-Stack based (meaning Servlet-Stack and Reactive
-  WebFlux) demo
+* branch [reactive-stack](https://github.com/clocken/spring-webclient-oauth2-login-mock/tree/reactive-stack) for a
+  completely Reactive Spring WebFlux based demo or
+* branch [servlet-stack](https://github.com/clocken/spring-webclient-oauth2-login-mock/tree/servlet-stack) for a
+  Servlet-Stack based or mixed-Stack based (meaning Servlet-Stack and Reactive WebFlux) demo
 
 Then run `mvn test -Dtest=TheRestClientImplIT` to see an integration test of
 the [TheRestClientImpl](src/main/java/com/github/clocken/spring/webclient/oauth2/login/mock/rest/client/TheRestClientImpl.java)
