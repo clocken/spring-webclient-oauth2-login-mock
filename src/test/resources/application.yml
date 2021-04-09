@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          api-client:
+            authorization-grant-type: client_credentials
+            client-id: test-client
+            client-secret: 6b30087f-65e2-4d89-a69e-08cb3c9f34d2 # bogus
+            provider: some-keycloak
+        provider:
+          some-keycloak:
+            token-uri: https://some.bogus/token/uri
+some-api:
+  base-url: null # dynamically set to MockServer in test
