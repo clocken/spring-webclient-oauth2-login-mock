@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          api-client:
+            authorization-grant-type: client_credentials
+            client-id: real-client-id-in-deployment
+            client-secret: real-client-secret-in-deployment
+            provider: some-keycloak
+        provider:
+          some-keycloak:
+            token-uri: http://real.token/uri/in/deployment
+some-api:
+  base-url: http://real.rest/api/v1
